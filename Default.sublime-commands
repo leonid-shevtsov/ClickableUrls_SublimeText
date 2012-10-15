@@ -1,0 +1,10 @@
+[
+  {
+    "caption": "Open URL under cursor",
+    "command": "open_url"
+  },
+  {
+    "caption": "Open all URLs",
+    "command": "open_all_urls"
+  }
+]
