@@ -64,7 +64,9 @@ class OpenUrlCommand(sublime_plugin.TextCommand):
         if self.view.id() in UrlHighlighter.urls_for_view:
             selection = self.view.sel()[0]
             if selection.empty():
-                selection = next(url for url in UrlHighlighter.urls_for_view[self.view.id()] if url.contains(selection))
+                selection = next((url for url in UrlHighlighter.urls_for_view[self.view.id()] if url.contains(selection)), None)
+                if not selection:
+                    return
             url = self.view.substr(selection)
             webbrowser.open(url)
 
