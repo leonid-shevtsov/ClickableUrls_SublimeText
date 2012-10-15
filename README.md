@@ -8,10 +8,9 @@ A plugin for [Sublime Text 2](http://sublimetext.com)
 
 *(Technically the URLs are not clickable per se, but openable with a key combination. Close enough!)*
 
-This plugin finds URLs in files opened in Sublime Text, underlines them, and lets you open them with a command (bound by default to `Cmd+Enter`).
+This plugin underlines URLs in Sublime Text 2, and lets you open them with a keystroke (`Cmd+Enter` by default).
 
-You can either put the cursor over an URL and hit `Cmd+Enter`, or select "Open URL under cursor" from the Command Palette. Instead of selecting an
-auto detected URL, you can select any block of text and it will also open in a browser.
+After you put the cursor over an URL, you can either hit `Cmd+Enter` (`Ctrl+Enter` on Windows & Linux), or select "Open URL under cursor" from the Command Palette. Instead of selecting an auto detected URL, you can select any block of text and it will also open in a browser as a URL.
 
 There is also an "Open all URLs" command, which opens all URLs found in the current document.
 
