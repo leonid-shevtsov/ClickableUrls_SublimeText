@@ -2,7 +2,7 @@
 
 A plugin for [Sublime Text 2](http://sublimetext.com)
 
-![Screenshot of a clickable URL](screenshot.png)
+![Screenshot of a clickable URL](https://raw.github.com/leonid-shevtsov/ClickableUrls_SublimeText2/master/screenshot.png)
 
 ## Summary
 
