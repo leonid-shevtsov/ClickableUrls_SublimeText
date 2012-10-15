@@ -6,7 +6,7 @@ A plugin for [Sublime Text 2](http://sublimetext.com)
 
 ## Summary
 
-*(Technically the URLs are not clickable per se, but openable with a key combination. Close enough!)*
+*(The URLs are not clickable literally, but openable with a key combination. Close enough!)*
 
 This plugin underlines URLs in Sublime Text 2, and lets you open them with a keystroke (`Cmd+Enter` by default).
 
