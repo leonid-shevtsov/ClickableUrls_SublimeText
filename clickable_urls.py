@@ -23,9 +23,9 @@ class UrlHighlighter(sublime_plugin.EventListener):
         self.update_url_highlights(view)
 
     def on_close(self, view):
-        self.urls_for_view.delete(view.id())
-        self.scopes_for_view.delete(view.id())
-        self.ignored_views.delete(view.id())
+        for map in [self.urls_for_view, self.scopes_for_view, self.ignored_views]:
+            if view.id() in map:
+                del map[view.id()]
 
     def update_url_highlights(self, view):
         if view.id() in UrlHighlighter.ignored_views:
