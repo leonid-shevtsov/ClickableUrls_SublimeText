@@ -36,7 +36,7 @@ class UrlHighlighter(sublime_plugin.EventListener):
 
         # Avoid slowdowns for views with too much URLs
         if len(urls) > UrlHighlighter.MAX_URLS:
-            print "UrlHighlighter: ignoring view with %u URLs" % len(urls)
+            print("UrlHighlighter: ignoring view with %u URLs" % len(urls))
             UrlHighlighter.ignored_views.append(view.id())
             return
 
