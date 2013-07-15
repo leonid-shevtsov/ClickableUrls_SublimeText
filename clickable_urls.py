@@ -47,10 +47,15 @@ class UrlHighlighter(sublime_plugin.EventListener):
         for url in UrlHighlighter.urls_for_view[view.id()]:
             scope_name = view.scope_name(url.a)
             scope_map.setdefault(scope_name, [])
-            scope_map[scope_name] += [sublime.Region(pos, pos) for pos in range(url.a, url.b)]
+            if sublime.version() > '3000':
+                scope_map[scope_name].append(sublime.Region(url.a, url.b))
+            else:
+                scope_map[scope_name] += [sublime.Region(pos, pos) for pos in range(url.a, url.b)]
+
+        flags = sublime.DRAW_SOLID_UNDERLINE if sublime.version() > '3000' else sublime.DRAW_EMPTY_AS_OVERWRITE
 
         for scope_name in scope_map:
-            view.add_regions(u'clickable-urls ' + scope_name, scope_map[scope_name], scope_name, sublime.DRAW_EMPTY_AS_OVERWRITE)
+            view.add_regions(u'clickable-urls ' + scope_name, scope_map[scope_name], scope_name, flags=flags)
         UrlHighlighter.scopes_for_view[view.id()] = scope_map.keys()
 
     def remove_old_highlights(self, view):
