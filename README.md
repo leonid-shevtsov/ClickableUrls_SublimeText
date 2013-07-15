@@ -6,15 +6,13 @@ A plugin for [Sublime Text 2](http://sublimetext.com)
 
 ## Summary
 
-*(The URLs are not clickable literally, but openable with a key combination. Close enough!)*
-
 This plugin underlines URLs in Sublime Text 2, and lets you open them with a keystroke (`Cmd+Option+Enter` by default).
 
 After you put the cursor over an URL, you can either hit `Cmd+Option+Enter` (`Ctrl+Alt+Enter` on Windows & Linux), or select "Open URL under cursor" from the Command Palette. Instead of selecting an auto detected URL, you can select any block of text and it will also open in a browser as a URL.
 
-There is also an "Open all URLs" command, which opens all URLs found in the current document.
+If you actually want to use a mouse+key combination to open URLs, you'll have to part with one of the selection modes (likely the Option-selection, which is rectangular block selection and is not used very often). See [this issue](https://github.com/leonid-shevtsov/ClickableUrls_SublimeText2/issues/2) for details and examples on how to do it. Unfortunately Sublime Text's API is not flexible with mouse bindings.
 
-**Behavior warning.** This plugin doesn't really let you *click* on a URL, and won't, until Sublime Text provides a civilized API for handling mouse clicks.
+There is also an "Open all URLs" command, which opens all URLs found in the current document.
 
 **Performance warning.** The plugin is automatically disabled if the document has more than 200 URLs, in order to avoid a massive performance hit.
 
