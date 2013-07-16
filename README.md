@@ -1,12 +1,12 @@
 # Clickable URLs
 
-A plugin for [Sublime Text 2](http://sublimetext.com)
+A plugin for [Sublime Text 2 and 3](http://sublimetext.com)
 
 ![Screenshot of a clickable URL](https://raw.github.com/leonid-shevtsov/ClickableUrls_SublimeText2/master/screenshot.png)
 
 ## Summary
 
-This plugin underlines URLs in Sublime Text 2, and lets you open them with a keystroke (`Cmd+Option+Enter` by default).
+This plugin underlines URLs in Sublime Text, and lets you open them with a keystroke (`Cmd+Option+Enter` by default).
 
 After you put the cursor over an URL, you can either hit `Cmd+Option+Enter` (`Ctrl+Alt+Enter` on Windows & Linux), or select "Open URL under cursor" from the Command Palette. Instead of selecting an auto detected URL, you can select any block of text and it will also open in a browser as a URL.
 
