@@ -18,7 +18,7 @@ There is also an "Open all URLs" command, which opens all URLs found in the curr
 
 ## Installation
 
-Drop the plugin into Sublime Text's Packages folder.
+With [Package Control](http://wbond.net/sublime_packages/package_control) (look for Clickable Urls), or just drop the plugin into Sublime Text's Packages folder.
 
 * * *
 
