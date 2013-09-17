@@ -28,7 +28,6 @@ class UrlHighlighter(sublime_plugin.EventListener):
                 del map[view.id()]
 
     def update_url_highlights(self, view):
-        print('!!!')
         if view.id() in UrlHighlighter.ignored_views:
             return
 
