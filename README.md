@@ -23,3 +23,6 @@ With [Package Control](http://wbond.net/sublime_packages/package_control) (look 
 * * *
 
 By [Leonid Shevtsov](http://leonid.shevtsov.me)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/leonid-shevtsov/clickableurls_sublimetext/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
