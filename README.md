@@ -20,6 +20,17 @@ There is also an "Open all URLs" command, which opens all URLs found in the curr
 
 With [Package Control](http://wbond.net/sublime_packages/package_control) (look for Clickable Urls), or just drop the plugin into Sublime Text's Packages folder.
 
+## Customising the browser
+
+By default, Clickable URLs uses some default system browser. If it doesn't work for you, you can change the browser by setting the `clickable_urls_browser` in the `ClickableUrls.sublime-settings`
+file, to which you can get from the menu.
+
+Anything from [this list](https://docs.python.org/2/library/webbrowser.html#webbrowser.register) will work, for example:
+
+    {
+        "clickable_urls_browser": "firefox"
+    }
+
 * * *
 
 By [Leonid Shevtsov](http://leonid.shevtsov.me)

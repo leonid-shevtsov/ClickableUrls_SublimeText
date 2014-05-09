@@ -60,6 +60,9 @@ class UrlHighlighter(sublime_plugin.EventListener):
                 view.erase_regions(u'clickable-urls ' + scope_name)
 
 
+def open_url(url):
+    webbrowser.get(sublime.load_settings('ClickableUrls.sublime-settings').get('clickable_urls_browser')).open(url, autoraise=True)
+
 class OpenUrlCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         if self.view.id() in UrlHighlighter.urls_for_view:
@@ -69,11 +72,11 @@ class OpenUrlCommand(sublime_plugin.TextCommand):
                 if not selection:
                     return
             url = self.view.substr(selection)
-            webbrowser.open(url, autoraise=True)
+            open_url(url)
 
 
 class OpenAllUrlsCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         if self.view.id() in UrlHighlighter.urls_for_view:
             for url in set([self.view.substr(url_region) for url_region in UrlHighlighter.urls_for_view[self.view.id()]]):
-                webbrowser.open(url)
+                open_url(url)

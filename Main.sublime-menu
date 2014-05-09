@@ -17,6 +17,11 @@
                         [
                             {
                                 "command": "open_file",
+                                "args": {"file": "${packages}/User/ClickableUrls.sublime-settings"},
+                                "caption": "Settings – User"
+                            },
+                            {
+                                "command": "open_file",
                                 "args": {
                                     "file": "${packages}/Clickable URLs/Default (OSX).sublime-keymap",
                                     "platform": "OSX"
