@@ -34,3 +34,6 @@ Anything from [this list](https://docs.python.org/2/library/webbrowser.html#webb
 * * *
 
 By [Leonid Shevtsov](http://leonid.shevtsov.me)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/leonid-shevtsov/clickableurls_sublimetext/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
