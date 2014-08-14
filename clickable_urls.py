@@ -42,6 +42,12 @@ class UrlHighlighter(sublime_plugin.EventListener):
 
         UrlHighlighter.urls_for_view[view.id()] = urls
 
+        highlight_urls = sublime.load_settings('ClickableUrls.sublime-settings').get('highlight_urls', True)
+
+        if (highlight_urls):
+            self.highlight_urls(view)
+
+    def highlight_urls(self, view):
         # We need separate regions for each lexical scope for ST to use a proper color for the underline
         # TODO someday Sublime Text 3 will support drawing underlines. Then this code could be civilised and de-hacked
         scope_map = {}
