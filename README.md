@@ -31,6 +31,15 @@ Anything from [this list](https://docs.python.org/2/library/webbrowser.html#webb
         "clickable_urls_browser": "firefox"
     }
 
+## Disabling URL highlighting
+
+Unfortunately, the only way to underline a block of text in ST2 is a hack with underlining empty regions, and there is no way to control its appearance. If you want, you can disable URL highlighting by setting the option highlight_urls to false in Preferences > Package Settings > Clickable URLs > Settings - User
+
+    {
+        "highlight_urls": false
+    }
+
+
 * * *
 
 By [Leonid Shevtsov](http://leonid.shevtsov.me)
