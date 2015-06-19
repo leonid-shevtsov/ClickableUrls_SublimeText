@@ -68,6 +68,13 @@
                                 },
                                 "caption": "Key Bindings – User"
                             },
+                            {
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/User/Default.sublime-mousemap"
+                                },
+                                "caption": "Mouse Bindings - User"
+                            },
                             { "caption": "-" }
                         ]
                     }

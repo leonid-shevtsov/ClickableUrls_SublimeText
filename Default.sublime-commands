@@ -1,7 +1,7 @@
 [
   {
     "caption": "Open URL under cursor",
-    "command": "open_url"
+    "command": "open_url_under_cursor"
   },
   {
     "caption": "Open all URLs",
