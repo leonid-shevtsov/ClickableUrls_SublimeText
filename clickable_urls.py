@@ -130,13 +130,13 @@ def open_url(url):
 class OpenUrlUnderCursorCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         if self.view.id() in UrlHighlighter.urls_for_view:
-            selection = self.view.sel()[0]
-            if selection.empty():
-                selection = next((url for url in UrlHighlighter.urls_for_view[self.view.id()] if url.contains(selection)), None)
-                if not selection:
-                    return
-            url = self.view.substr(selection)
-            open_url(url)
+            for selection in self.view.sel():
+                if selection.empty():
+                    selection = next((url for url in UrlHighlighter.urls_for_view[self.view.id()] if url.contains(selection)), None)
+                    if not selection:
+                        return
+                url = self.view.substr(selection)
+                open_url(url)
 
 
 class OpenAllUrlsCommand(sublime_plugin.TextCommand):
