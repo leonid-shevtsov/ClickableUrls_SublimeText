@@ -7,7 +7,7 @@ import threading
 class UrlHighlighter(sublime_plugin.EventListener):
     # Thanks Jeff Atwood http://www.codinghorror.com/blog/2008/10/the-problem-with-urls.html
     # ^ that up here is a URL that should be matched
-    URL_REGEX = "\\bhttps?://[-A-Za-z0-9+&@#/%?=~_()|!:,.;']*[-A-Za-z0-9+&@#/%=~_(|]"
+    URL_REGEX = "\\bhttps?://[^\"'\s]+"
     DEFAULT_MAX_URLS = 200
     SETTINGS_FILENAME = 'ClickableUrls.sublime-settings'
 
