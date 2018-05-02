@@ -1,5 +1,7 @@
 # Clickable URLs
 
+<a href='https://ko-fi.com/X8X19BQH' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
 A plugin for [Sublime Text 2 and 3](http://sublimetext.com)
 
 ![Screenshot of a clickable URL](https://raw.github.com/leonid-shevtsov/ClickableUrls_SublimeText2/master/screenshot.png)
@@ -16,7 +18,7 @@ If you actually want to use a mouse+key combination to open URLs, you'll have to
 
 There is also an "Open all URLs" command, which opens all URLs found in the current document.
 
-**Performance warning.** The plugin is automatically disabled if the document has more than 200 URLs, in order to avoid a massive performance hit. To change this number, set the `max_url_limit` option (see "Configuration" below). 
+**Performance warning.** The plugin is automatically disabled if the document has more than 200 URLs, in order to avoid a massive performance hit. To change this number, set the `max_url_limit` option (see "Configuration" below).
 
 ## Installation
 
@@ -63,6 +65,6 @@ Note that this isn't an issue with Sublime Text 3.
 
 * URLs are not underlined in Markdown files when using the [MarkdownEditing plugin](https://github.com/SublimeText-Markdown/MarkdownEditing) plugin (that plugin applies its own styles to the URLs). Otherwise ClickableUrls works as usual.
 
-* * *
+---
 
 (c) 2015 [Leonid Shevtsov](http://leonid.shevtsov.me) under the MIT license.
