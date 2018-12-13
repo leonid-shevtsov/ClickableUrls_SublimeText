@@ -41,8 +41,8 @@ class UrlHighlighter(sublime_plugin.EventListener):
             if view.id() in map:
                 del map[view.id()]
 
-    """The logic entry point. Find all URLs in view, store and highlight them"""
     def update_url_highlights(self, view):
+        """The logic entry point. Find all URLs in view, store and highlight them"""
         settings = sublime.load_settings(UrlHighlighter.SETTINGS_FILENAME)
         should_highlight_urls = settings.get('highlight_urls', True)
         max_url_limit = settings.get('max_url_limit', UrlHighlighter.DEFAULT_MAX_URLS)
@@ -64,18 +64,18 @@ class UrlHighlighter(sublime_plugin.EventListener):
         if (should_highlight_urls):
             self.highlight_urls(view, urls)
 
-    """Same as update_url_highlights, but avoids race conditions with a
-    semaphore."""
     def update_url_highlights_async(self, view):
+        """Same as update_url_highlights, but avoids race conditions with a
+        semaphore."""
         UrlHighlighter.highlight_semaphore.acquire()
         try:
             self.update_url_highlights(view)
         finally:
             UrlHighlighter.highlight_semaphore.release()
 
-    """Creates a set of regions from the intersection of urls and scopes,
-    underlines all of them."""
     def highlight_urls(self, view, urls):
+        """Creates a set of regions from the intersection of urls and scopes,
+        underlines all of them."""
         # We need separate regions for each lexical scope for ST to use a proper color for the underline
         scope_map = {}
         for url in urls:
@@ -87,10 +87,10 @@ class UrlHighlighter(sublime_plugin.EventListener):
 
         self.update_view_scopes(view, scope_map.keys())
 
-    """Apply underlining with provided scope name to provided regions.
-    Uses the empty region underline hack for Sublime Text 2 and native
-    underlining for Sublime Text 3."""
     def underline_regions(self, view, scope_name, regions):
+        """Apply underlining with provided scope name to provided regions.
+        Uses the empty region underline hack for Sublime Text 2 and native
+        underlining for Sublime Text 3."""
         if sublime.version() >= '3019':
             # in Sublime Text 3, the regions are just underlined
             view.add_regions(
@@ -107,9 +107,9 @@ class UrlHighlighter(sublime_plugin.EventListener):
                 scope_name,
                 sublime.DRAW_EMPTY_AS_OVERWRITE)
 
-    """Store new set of underlined scopes for view. Erase underlining from
-    scopes that were used but are not anymore."""
     def update_view_scopes(self, view, new_scopes):
+        """Store new set of underlined scopes for view. Erase underlining from
+        scopes that were used but are not anymore."""
         old_scopes = UrlHighlighter.scopes_for_view.get(view.id(), None)
         if old_scopes:
             unused_scopes = set(old_scopes) - set(new_scopes)
@@ -119,13 +119,13 @@ class UrlHighlighter(sublime_plugin.EventListener):
         UrlHighlighter.scopes_for_view[view.id()] = new_scopes
 
 
-
 def open_url(url):
     browser =  sublime.load_settings(UrlHighlighter.SETTINGS_FILENAME).get('clickable_urls_browser')
     try:
         webbrowser.get(browser).open(url, autoraise=True)
     except(webbrowser.Error):
         sublime.error_message('Failed to open browser. See "Customizing the browser" in the README.')
+
 
 class OpenUrlUnderCursorCommand(sublime_plugin.TextCommand):
     def run(self, edit):
