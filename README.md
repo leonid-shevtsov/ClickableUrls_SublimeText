@@ -1,6 +1,10 @@
-# Clickable URLs
+# Project is discontinued!
 
-<a href='https://ko-fi.com/X8X19BQH' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+I'm not using Sublime Text anymore and have no interest in supporting this project.
+
+If you want to carry on, you have my full permission - and gratitude!
+
+# Clickable URLs
 
 A plugin for [Sublime Text 2 and 3](http://sublimetext.com)
 
